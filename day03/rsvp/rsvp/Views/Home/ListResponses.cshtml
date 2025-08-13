@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<rsvp.Models.GuestResponse>
+
+<div class="text-center p-2">
+    <h2 class="text-center">
+        Here is the list of people attending the party
+    </h2>
+    <table class="table table-bordered table-striped table-sm">
+        <thead>
+            <tr><th>Name</th><th>Email</th><th>Phone</th></tr>
+        </thead>
+        <tbody>
+            @foreach (rsvp.Models.GuestResponse r in Model!)
+            {
+                <tr>
+                    <td>@r.Name</td>
+                    <td>@r.Email</td>
+                    <td>@r.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
