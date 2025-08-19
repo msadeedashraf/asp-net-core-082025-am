@@ -7,7 +7,7 @@
 ```
 
 
-- Install the EF Core CLI tools (once per machine):
+- Install the EF Core CLI tools (once per machine): before `dotnet ef migrations add Initial `
 
 ```
 > dotnet tool install --global dotnet-ef
