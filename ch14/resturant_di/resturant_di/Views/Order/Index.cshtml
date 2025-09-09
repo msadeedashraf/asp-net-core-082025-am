@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Place an Order";
+}
+
+<h2>Place an Order</h2>
+
+<form asp-action="PlaceOrder" method="post">
+    <label for="dish">Dish:</label>
+    <input type="text" id="dish" name="dish" required />
+    <button type="submit">Submit</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
