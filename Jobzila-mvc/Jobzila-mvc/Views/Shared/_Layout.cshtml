@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Jobzila_mvc</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Jobzila_mvc.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+
+        <h1>JobZila</h1>
+        <nav>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index" >Home</a></li>
+                <li><a asp-controller="Home" asp-action="job_search">Job Search</a></li>
+                <li><a asp-controller="Home" asp-action="job_listing">Job Listing</a></li>
+                <li><a asp-controller="Home" asp-action="terms">Terms of Service</a></li>
+                <li><a asp-controller="Home" asp-action="privacy">Privacy Policy</a></li>
+                <li><a asp-controller="Home" asp-action="contact_us">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div >
+        <main >
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <p>
+            &copy; My Job board. All rights reserved. |
+            <a href="contact_us.html">Contact Us</a> |
+            <a href="terms.html">Terms</a> |
+            <a href="privacy.html">Privacy</a>
+
+        </p>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
